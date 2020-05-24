@@ -1,18 +1,27 @@
-<!-- index.wxml
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view> -->
-<view>
-  <view class="textarea">
-    <textarea class="input-area" placeholder="请输入需要翻译的内容......"></textarea>
-  </view>
+
+	<view class="language">
+		<navigator url="/pages/change/change" hover-class="navigator-hover">
+			<text style="margin-left: 10rpx">语言</text>
+			<text class="iconfont icon-down"></text>
+		</navigator>
+	</view>
+
+
+	<view class="input-area">
+		<view class="textarea-wrap">
+			<textarea class="textarea" placeholder="请输入需要翻译的内容......" value="{{query}}"></textarea>
+		</view>
+		<text class="iconfont icon-clear" bindtap="clearText"></text>
+	</view>
+
+	<view class="translation">
+		<text style="margin-left: 10rpx">译文</text>
+		<text class="translated-textarea" selectable="true"></text>
+	</view>
+
+
+	<view class="footer">
+		<text>Gzy</text>
+	</view>
 </view>

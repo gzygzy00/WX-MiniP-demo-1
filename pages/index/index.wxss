@@ -1,31 +1,50 @@
-/* *index.wxss*
-.userinfo {
+.container {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  padding: 10rpx 0;
+  box-sizing: border-box;
+}
+
+.language {
+  display: flex;
   align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.language .icon-down {
+  margin-left: 10rpx;
+  font-size: inherit;
 }
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
-} */
-
-.textarea {
-  border: 1px solid darkcyan;
+.language .navigator-hover {
+  color: #2980B9;
 }
 
 .input-area {
-  padding: 20rpx;
-  border: 1px solid red;
+  position: relative;
+  background-color: #FFF;
 }
 
+.input-area .icon-clear {
+  position: absolute;
+  top: 5%;
+  left: 95%;
+  font-size: inherit;
+}
+
+.textarea {
+  padding: 20rpx;
+}
+
+.translation {
+  /* height: 100%; */
+  margin-top: 6rpx;
+  background-color: #fff;
+  flex: 1;
+}
+
+.footer {
+  margin-top: 6rpx;
+  text-align: center;
+}

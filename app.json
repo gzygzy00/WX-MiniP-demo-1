@@ -6,22 +6,25 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#3498DB",
-    "navigationBarTitleText": "小翻译",
+    "navigationBarTitleText": "G 翻译",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#BDC3C7"
+    "backgroundColor": "#eee"
   },
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "翻译"
-    },
-    {
-      "pagePath": "pages/history/history",
-      "text": "历史"
-    }],
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "翻译"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史"
+      }
+    ],
     "position": "top",
     "color": "#2C3E50",
     "selectedColor": "#2980B9",
     "backgroundColor": "#ECF0F1"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

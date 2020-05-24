@@ -13,8 +13,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.7.1",
-	"appid": "wx69f336a64455b35d",
-	"projectname": "miniprogram-test-3",
+	"appid": "touristappid",
+	"projectname": "WX-MiniP-demo-1",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
