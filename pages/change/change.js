@@ -1,66 +1,25 @@
-// pages/history/history.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    items: [
+      {value: 'zh', name: '中文'},
+      {value: 'en', name: '英语', checked: 'true'},
+      {value: 'jp', name: '日语'},
+      {value: 'kor', name: '韩语'},
+      {value: 'fra', name: '法语'},
+      {value: 'spa', name: '西班牙语'},
+    ]
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  radioChange(e) {
+    console.log('radio发生change事件，携带value值为：', e.detail.value)
+    // 当数组长度在循环过程中不会改变时，我们应将数组长度用变量存储起来，这样会获得更好的效率
+    const items = this.data.items
+    for (let i = 0, len = items.length; i < len; i++) {
+      items[i].checked = items[i].value === e.detail.value
+    }
 
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    this.setData({
+      items
+    })
   }
 })

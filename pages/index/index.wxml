@@ -10,18 +10,22 @@
 
 	<view class="input-area">
 		<view class="textarea-wrap">
-			<textarea class="textarea" placeholder="请输入需要翻译的内容......" value="{{query}}"></textarea>
+			<textarea class="textarea" placeholder="请输入需要翻译的内容......" value="{{query}}" 
+								bindinput="onInput" bindconfirm="onConfirm" bindblur="onConfirm">
+			</textarea>
 		</view>
-		<text class="iconfont icon-clear" bindtap="clearText"></text>
+		<text class="iconfont icon-clear" bindtap="clearText" hidden="{{hideClearFont}}"></text>
 	</view>
 
 	<view class="translation">
 		<text style="margin-left: 10rpx">译文</text>
-		<text class="translated-textarea" selectable="true"></text>
+		<text class="translated-textarea" wx:for="{{result}}"	wx:key="index">
+			<text selectable="true">{{item.dst}}</text>
+		</text>
 	</view>
 
 
 	<view class="footer">
-		<text>Gzy</text>
+		<text>2020 Gzy</text>
 	</view>
 </view>

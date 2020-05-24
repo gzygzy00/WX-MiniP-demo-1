@@ -29,7 +29,7 @@
 .input-area .icon-clear {
   position: absolute;
   top: 5%;
-  left: 95%;
+  left: 93%;
   font-size: inherit;
 }
 
@@ -38,10 +38,15 @@
 }
 
 .translation {
-  /* height: 100%; */
   margin-top: 6rpx;
   background-color: #fff;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.translation .translated-textarea {
+  margin-top: 10rpx;
+  margin-left: 10rpx;
 }
 
 .footer {
