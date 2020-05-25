@@ -2,7 +2,7 @@
 
 	<view class="language">
 		<navigator url="/pages/change/change" hover-class="navigator-hover">
-			<text style="margin-left: 10rpx">语言</text>
+			<text style="margin-left: 10rpx">到{{curlang}}</text>
 			<text class="iconfont icon-down"></text>
 		</navigator>
 	</view>

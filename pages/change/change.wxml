@@ -1,9 +1,9 @@
 <view class="change">
   <text>翻译到</text>
 	<radio-group bindchange="radioChange">
-		<label class="change-area" wx:for="{{items}}" wx:key="{{item.value}}">
+		<label class="change-area" wx:for="{{langList}}" wx:key="{{item.lang}}">
 			<view class="checkbox">
-				<radio value="{{item.value}}" checked="true" />
+				<radio value="{{item.lang}}" checked="true" />
 			</view>
 			<view class="languages">{{item.name}}</view>
 		</label>
