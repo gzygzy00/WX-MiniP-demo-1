@@ -2,8 +2,6 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: space-between; */
   padding: 10rpx 0;
   box-sizing: border-box;
 }
@@ -11,26 +9,44 @@
 .language {
   display: flex;
   align-items: center;
+  margin: 15rpx 0;
+}
+
+.language .nav {
+  margin-left: 10rpx;
+  border: 5rpx solid #5e6472;
+  border-radius: 6rpx;
+  padding: 10rpx 5rpx;
+  color: #000;
+  background-color: #ffd026;
 }
 
 .language .icon-down {
   margin-left: 10rpx;
   font-size: inherit;
+  color: #5e6472;
 }
 .language .navigator-hover {
-  color: #2980B9;
+  background-color: #C0C4CC;
 }
 
 .input-area {
   position: relative;
   background-color: #FFF;
+  border-radius: 2%;
 }
 
 .input-area .icon-clear {
   position: absolute;
   top: 5%;
   left: 93%;
-  font-size: inherit;
+  font-size: 48rpx;
+}
+.input-area .icon-go {
+  position: absolute;
+  top: 5%;
+  left: 85%;
+  font-size: 48rpx;
 }
 
 .textarea {
@@ -38,15 +54,18 @@
 }
 
 .translation {
-  margin-top: 6rpx;
+  border-radius: 2%;
   background-color: #fff;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 .translation .translated-textarea {
-  margin-top: 10rpx;
-  margin-left: 10rpx;
+  padding: 20rpx;
+}
+.translation .txt {
+  padding: 20rpx;
+  color: #C0C4CC;
 }
 
 .footer {

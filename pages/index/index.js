@@ -10,8 +10,26 @@ Page({
     query: '',
     result: [],
     hideClearFont: true,
-    curlang: {}
+    curLang: {}
   },
+  onLoad(options) {
+    console.log('loading...');
+    console.log(options)
+    if (options.q) {
+      this.setData({
+        query: options.q
+      })
+    }
+  },
+  onShow() {
+    if (this.data.curLang.lang !== app.globalData.curLang.lang) {
+      this.setData({
+        'curLang': app.globalData.curLang
+      })
+      this.onConfirm()
+    }
+  },
+  onReady() {},
   onInput(event) {
     const value = event.detail.value
     this.setData({
@@ -29,10 +47,16 @@ Page({
   },
   onConfirm() {
     if (!this.data.query) return
-    translate(this.data.query).then((resolve) => {
+    translate(this.data.query, app.globalData.curLang.lang).then((res) => {
       this.setData({
-        result: resolve.trans_result
+        result: res.trans_result
       })
+      // 历史记录功能
+      const history = wx.getStorageSync('history') || []
+      history.unshift(this.data.result)
+      console.log(history)
+      history.length = history.length > 10 ? 10 : history.length
+      wx.setStorageSync('history', history)
     })
   },
   clearText() {

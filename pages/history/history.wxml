@@ -1,2 +1,8 @@
-<!--pages/history/history.wxml-->
-<view>history</view>
+<view class="history">
+  <text class="txt">历史记录：</text>
+    <view class="history-wrapper" hover-class="list-hover"
+          wx:for="{{history}}" wx:key="index" bindtap="onTapItem" data-tra="{{history[index]}}">
+      <text class="query">{{item.length === 1 ? item[0].src : item[0].src + "..."}}</text>
+      <text class="result">{{item.length === 1 ? item[0].dst : item[0].dst + "..."}}</text>
+    </view>
+</view>

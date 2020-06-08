@@ -1,11 +1,9 @@
 <view class="change">
-  <text>翻译到</text>
-	<radio-group bindchange="radioChange">
-		<label class="change-area" wx:for="{{langList}}" wx:key="{{item.lang}}">
-			<view class="checkbox">
-				<radio value="{{item.lang}}" checked="true" />
-			</view>
-			<view class="languages">{{item.name}}</view>
-		</label>
-	</radio-group>
+  <text class="txt">翻译到</text>
+	<view class="langList" hover-class="hover-lang"
+				wx:for="{{langList}}" wx:key="{{item.lang}}" bindtap="onTap"
+				data-lang="{{item.lang}}" data-name="{{item.name}}">
+			<text class="languages">{{item.name}}</text>
+			<text class="iconfont icon-selected" wx:if="{{item.lang===curLang.lang}}"></text>
+	</view>
 </view>

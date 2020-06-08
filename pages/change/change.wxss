@@ -1,4 +1,31 @@
-.change-area {
+.change {
  display: flex;
+ flex-direction: column;
+}
+
+.txt {
+  color: #909399;
+  padding: 10rpx;
+}
+
+.langList {
+  border-top: 1px solid #DCDFE6;
+  box-shadow: 0 3rpx 1rpx ;
+  padding: 20rpx 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.langList .languages {
+  margin-left: 10rpx;
+}
+
+.icon-selected {
+  margin-left: auto;
+  color: #e86b0b;
+}
+
+.hover-lang {
+  background-color: #5bc8ff;
 }
 

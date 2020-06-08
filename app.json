@@ -4,11 +4,11 @@
     "pages/history/history"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#3498DB",
-    "navigationBarTitleText": "G 翻译",
-    "navigationBarTextStyle": "black",
-    "backgroundColor": "#eee"
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#36382e",
+    "navigationBarTitleText": "G简翻译",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F1FAFF"
   },
   "tabBar": {
     "list": [
@@ -22,9 +22,9 @@
       }
     ],
     "position": "top",
-    "color": "#2C3E50",
-    "selectedColor": "#2980B9",
-    "backgroundColor": "#ECF0F1"
+    "color": "#fff",
+    "selectedColor": "#5e6472",
+    "backgroundColor": "#5BC8FF"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap92.json"
 }

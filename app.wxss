@@ -4,7 +4,8 @@
 page {
   height: 100%;
   width: auto;
-  background-color: #eee;
+  color: #303133;
+  background-color: #F1FAFF;
   box-sizing: border-box;
 }
 

@@ -8,9 +8,8 @@ const key = "EVq_4lLkLo9KYRJBYoiM"
 // 翻译源语言
 let from = "auto"
 // 译文语言
-let to = "zh"
 
-function translate(query) {
+function translate(query, to) {
   return new Promise((resolve, reject) => {
     // 随机数
     const salt = (new Date).getTime()

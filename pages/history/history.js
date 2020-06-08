@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    history: []
   },
 
   /**
@@ -26,7 +26,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      'history': wx.getStorageSync('history')
+    })
+    console.log(this.data.history);
+  },
+  onTapItem(e) {
+    console.log(e.currentTarget.dataset)
+    const items = e.currentTarget.dataset.tra
+    console.log(items)
+    wx.reLaunch({
+      url: `/pages/index/index?q=${items[0].src}&r=${items[0].dst}`,
+    })
   },
 
   /**

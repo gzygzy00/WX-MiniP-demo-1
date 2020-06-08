@@ -1,1 +1,29 @@
 /* pages/history/history.wxss */
+.history {
+  color: #606266;
+}
+
+.txt {
+  color: #909399;
+  padding: 10rpx 0 10rpx 10rpx;
+}
+
+.history-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 5rpx 0 5rpx 20rpx;
+  border-top: 1px solid #2c3032;
+}
+
+.query {
+  padding: 10rpx 0;
+}
+
+.result {
+  padding-top: 10rpx;
+  color: #67C23A;
+}
+
+.list-hover {
+  background-color: #ffd026;
+}

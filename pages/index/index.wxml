@@ -1,24 +1,25 @@
 <view class="container">
 
-	<view class="language">
-		<navigator url="/pages/change/change" hover-class="navigator-hover">
-			<text style="margin-left: 10rpx">到{{curlang}}</text>
-			<text class="iconfont icon-down"></text>
-		</navigator>
-	</view>
-
-
 	<view class="input-area">
 		<view class="textarea-wrap">
 			<textarea class="textarea" placeholder="请输入需要翻译的内容......" value="{{query}}" 
 								bindinput="onInput" bindconfirm="onConfirm" bindblur="onConfirm">
 			</textarea>
 		</view>
-		<text class="iconfont icon-clear" bindtap="clearText" hidden="{{hideClearFont}}"></text>
+		<text class="iconfont icon-clear" bindtap="clearText" hidden="{{hideClearFont}}" hover-class="navigator-hover"></text>
+		<text class="iconfont icon-go" hidden="{{hideClearFont}}"></text>
+
+	</view>
+
+	<view class="language">
+		<navigator url="/pages/change/change" hover-class="navigator-hover" class="nav">
+			<text style="margin-left: 10rpx">翻译到{{curLang.name}}</text>
+			<text class="iconfont icon-down"></text>
+		</navigator>
 	</view>
 
 	<view class="translation">
-		<text style="margin-left: 10rpx">译文</text>
+		<text style="margin-left: 10rpx" class="txt">译文</text>
 		<text class="translated-textarea" wx:for="{{result}}"	wx:key="index">
 			<text selectable="true">{{item.dst}}</text>
 		</text>
